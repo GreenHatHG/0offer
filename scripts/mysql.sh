@@ -35,10 +35,10 @@ install_mysql()
 {
     echo 'install mysql'
     sudo docker pull mysql:5.6
-    sudo docker run --name docker-mysql -p 33061:3306 -v ~/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=11 -d mysql:5.6
+    sudo docker run --restart=always --name docker-mysql -p 33061:3306 -v ~/mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=11 -d mysql:5.6
     echo 'installed mysql successfully'
     echo 'mysql config: '
-    echo 'user:root password:11 port:33060'
+    echo 'user:root password:11 port:33061'
 }
 
 
