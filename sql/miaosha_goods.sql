@@ -11,7 +11,7 @@
  Target Server Version : 50649
  File Encoding         : 65001
 
- Date: 06/09/2020 01:01:49
+ Date: 06/09/2020 15:50:46
 */
 
 SET NAMES utf8mb4;
@@ -23,7 +23,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `miaosha_goods`;
 CREATE TABLE `miaosha_goods`  (
   `id` int(10) UNSIGNED NOT NULL COMMENT '商品ID',
-  `goods_name` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL COMMENT '商品名称',
+  `goods_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '商品名称',
   `goods_stock` int(11) NOT NULL COMMENT '商品库存',
   `miaosha_start_date` datetime(0) NULL DEFAULT NULL COMMENT '秒杀开始时间',
   `miaosha_end_date` datetime(0) NULL DEFAULT NULL COMMENT '秒杀结束时间\r\n',
