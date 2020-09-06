@@ -17,6 +17,8 @@ func main() {
 	{
 		group.GET("/test", api.Test)
 		group.GET("/user_infos", api.SelectAllUserInfo)
+		group.POST("/user_infos/actions/batch_insert", api.BatchInsertUserInfo)
+		group.POST("/order/actions/miaosha", api.Miaosha)
 	}
 
 	if err := r.Run(); err != nil {

@@ -19,6 +19,14 @@ func Result(httpCode int, code int, data interface{}, msg string, c *gin.Context
 	})
 }
 
+func Ok(c *gin.Context) {
+	Result(http.StatusOK, 200, map[string]interface{}{}, "操作成功", c)
+}
+
 func OkWithData(data interface{}, c *gin.Context) {
 	Result(http.StatusOK, 0, data, "操作成功", c)
+}
+
+func FailWithMessage(message string, c *gin.Context) {
+	Result(http.StatusBadRequest, 400, map[string]interface{}{}, message, c)
 }
