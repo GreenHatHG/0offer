@@ -11,7 +11,7 @@
  Target Server Version : 50649
  File Encoding         : 65001
 
- Date: 06/09/2020 01:01:58
+ Date: 06/09/2020 15:50:53
 */
 
 SET NAMES utf8mb4;
@@ -22,10 +22,10 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `order`;
 CREATE TABLE `order`  (
-  `id` int(10) UNSIGNED NOT NULL COMMENT '用户ID',
-  `order_id` int(10) UNSIGNED NOT NULL COMMENT '订单ID',
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '订单ID',
+  `user_id` int(10) UNSIGNED NOT NULL COMMENT '用户ID',
   `goods_id` int(10) UNSIGNED NOT NULL COMMENT '商品ID',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 SET FOREIGN_KEY_CHECKS = 1;
